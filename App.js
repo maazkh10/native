@@ -20,10 +20,20 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Intro">
+      <Stack.Navigator initialRouteName="OTPScreen">
         <Stack.Screen
           name="Intro"
           component={Intro}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="MyProfile"
+          component={MyProfile}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="OTPScreen"
+          component={OTPScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -39,16 +49,6 @@ function App() {
         <Stack.Screen
           name="MyMobile"
           component={MyMobile}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="OTPScreen"
-          component={OTPScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="MyProfile"
-          component={MyProfile}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
