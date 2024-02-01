@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity  } from 'react-native';
 import CustomImageCarousal from '../components/CustomImageCrousal';
 
-const Home = () => {
+const Home = ({navigation }) => {
   const data = [
     {
       image: require('../assets/girl1.jpg'),
@@ -21,11 +21,19 @@ const Home = () => {
     },
   ];
 
+  const handlePress = () => {
+    navigation.navigate('Signup');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <CustomImageCarousal data={data} />
-        <Text style={styles.text}>MAAZ</Text>
+      
+        <TouchableOpacity onPress={handlePress}>
+          <Text style={styles.txt}>MAAZ</Text>
+        </TouchableOpacity>
+
       </View>
     </View>
   );
@@ -46,6 +54,9 @@ const styles = StyleSheet.create({
   text: {
     // Your text styles here
   },
+  txt: {
+    marginBottom: 20
+  }
 });
 
 export default Home;

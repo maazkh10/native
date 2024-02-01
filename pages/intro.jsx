@@ -4,6 +4,7 @@ import Svg  from 'react-native-svg'; // Import the correct SVG components
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './Home';
+import Signup from './Signup';
 import SvgComponent from '../assets/svg';
 const Stack = createStackNavigator();
 
@@ -51,6 +52,7 @@ const App = () => (
     <Stack.Navigator initialRouteName="Intro">
       <Stack.Screen name="Intro" component={Intro} options= {{ headerShown : false}}  />
       <Stack.Screen name="Home" component={Home}  options= {{ headerShown : false}}  />
+      <Stack.Screen name="Signup" component={Signup} options= {{ headerShown : false}} />
     </Stack.Navigator>
   </NavigationContainer>
 );
