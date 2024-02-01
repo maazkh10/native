@@ -43,7 +43,7 @@ const MyMobile = () => {
           </Text>
         </View>
         <TouchableOpacity onPress={mynavigation}>
-        <PrimaryButton title="Continue" />
+        <PrimaryButton onPress={()=>navigation.navigate('OTPScreen')} title="Continue" />
         </TouchableOpacity>
       </View>
     </View>

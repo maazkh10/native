@@ -10,7 +10,7 @@ import OTPInput from "../components/OTPInput";
 import { theme } from "../assets/theme";
 import { ClearIcon } from "../assets/Icon";
 
-const OTPScreen = () => {
+const OTPScreen = ({navigation}) => {
   const [otp, setOtp] = useState(["", "", "", ""]); // State for each digit
 
   const handleOtpChange = (index, value) => {
@@ -88,7 +88,7 @@ const OTPScreen = () => {
           </TouchableOpacity>
         ))}
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate('Location')}>
         <Text style={styles.sendAgain}>Send again</Text>
       </TouchableOpacity>
     </View>
