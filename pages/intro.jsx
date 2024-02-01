@@ -33,9 +33,7 @@ class Intro extends Component {
     return (
       <View style={styles.container}>
         <Animated.View style={[styles.intro, { transform: [{ translateY }] }]}>
-         
         
-
         {/* SVG Component */}
         <TouchableOpacity onPress={this.handleSvgClick}>
       <SvgComponent  />
