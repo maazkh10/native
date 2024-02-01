@@ -1,7 +1,7 @@
 import * as React from "react"
 import Svg, { Path, Defs, LinearGradient, Stop } from "react-native-svg"
 
-function SvgComponent(props) {
+export function SvgComponent(props) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -43,5 +43,12 @@ function SvgComponent(props) {
     </Svg>
   )
 }
+//  function SvgFacebook() {
+//   return (
+//     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+//       <path fillRule="evenodd" clipRule="evenodd" d="M28.4544 2H3.54562C2.69214 2.00034 2.00034 2.69214 2 3.54562V28.4544C2.00034 29.3079 2.69214 29.9997 3.54562 30H16V19H12.6531V15H16V11.8125C16 8.19625 18.5081 6.2275 21.7388 6.2275C23.2844 6.2275 24.9469 6.34375 25.3331 6.395V10.1719H22.7594C21.0019 10.1719 20.6669 11.0031 20.6669 12.2281V15H24.8544L24.3075 19H20.6669V30H28.4544C29.3079 29.9997 29.9997 29.3079 30 28.4544V3.54562C29.9997 2.69214 29.3079 2.00034 28.4544 2Z" fill="#323755"/>
+//     </svg>
+//   );
+// }
 
-export default SvgComponent
+export default SvgComponent;  // Export SvgComponent as default

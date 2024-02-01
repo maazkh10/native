@@ -15,6 +15,7 @@ import Intro from "./screens/Intro";
 import MyMobile from "./screens/MyMobile";
 import OTPScreen from "./screens/OTPScreen";
 import MyProfile from "./screens/MyProfile";
+import Location from "./screens/Location";
 const Stack = createStackNavigator();
 
 function App() {
@@ -49,6 +50,11 @@ function App() {
         <Stack.Screen
           name="MyMobile"
           component={MyMobile}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Location"
+          component={Location}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   intro: {
     alignItems: 'center',
     justifyContent: 'center',
-    bottom: 50,
+    bottom: 30,
     backgroundColor: 'white',
   },
 });

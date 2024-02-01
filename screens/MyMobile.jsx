@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from "react-native";
 import PhoneInput from "react-native-phone-number-input";
 import { theme } from "../assets/theme";
 import PrimaryButton from "../components/PrimaryButton";
 import { LockIcon } from "../assets/Icon";
+import { useNavigation } from "@react-navigation/core";
 
 const MyMobile = () => {
+  const navigation = useNavigation();
+
+  const mynavigation = () =>{
+      navigation.navigate('Location')
+  }
   const [code, setCode] = useState("");
 
   const handleCodeChange = (text) => {
@@ -36,7 +42,9 @@ const MyMobile = () => {
             We never share this with anyone and it won't be on you profile
           </Text>
         </View>
+        <TouchableOpacity onPress={mynavigation}>
         <PrimaryButton title="Continue" />
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -77,13 +77,7 @@ const OTPScreen = () => {
             }
           >
             <Text style={styles.numberButtonText}>
-              {typeof item === "number" ? (
-                item
-              ) : item.key === "X" ? (
-                <ClearIcon />
-              ) : (
-                ""
-              )}
+              {typeof item === "number" ? item : item.key===""?"":<ClearIcon/>}
             </Text>
           </TouchableOpacity>
         ))}
