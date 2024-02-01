@@ -16,6 +16,7 @@ import MyMobile from "./screens/MyMobile";
 import OTPScreen from "./screens/OTPScreen";
 import MyProfile from "./screens/MyProfile";
 import Location from "./screens/Location";
+import AllowNotification from "./screens/AllowNotification";
 const Stack = createStackNavigator();
 
 function App() {
@@ -55,6 +56,11 @@ function App() {
         <Stack.Screen
           name="Location"
           component={Location}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+           name="AllowNotification"
+           component={AllowNotification}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

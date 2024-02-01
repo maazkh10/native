@@ -1,28 +1,30 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { SvgLocation } from "../assets/svgrwo";
 import PrimaryButton from "../components/PrimaryButton";
+import { AllowNotificationIcon } from "../assets/Icon";
 
-const Location = ({ navigation }) => {
+const AllowNotification = ({ navigation }) => {
   return (
     <View style={{ padding: 10, flex: 1, backgroundColor: "white" }}>
       <View style={styles.container}>
         <View style={styles.svgContainer}>
           <View style={styles.iconWrapper}>
-            <SvgLocation style={{ width: 40, height: 40, fill: "#fff" }} />
+            <AllowNotificationIcon
+              style={{ width: 40, height: 40, fill: "#fff" }}
+            />
           </View>
-          <Text style={styles.text}>Set your location </Text>
-          <Text style={styles.text}>Service</Text>
+          <Text style={styles.text}>Allow </Text>
+          <Text style={styles.text}>Notification</Text>
           <Text style={styles.textt}>
-            We sneakily peek at your location to unveil potential matches just
-            around the corner. It's like having a matchmaking ninja in your
-            pocket!
+            We sneakily peek at your AllowNotification to unveil potential
+            matches just around the corner. It's like having a matchmaking ninja
+            in your pocket!
           </Text>
         </View>
       </View>
       <PrimaryButton
-        title="Set location services"
-        onPress={() => navigation.navigate("AllowNotification")}
+        title="Allow Notification"
+        onPress={() => navigation.navigate("MyProfile")}
       />
     </View>
   );
@@ -41,8 +43,8 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom:10,
-    backgroundColor: "#A72024",
+      backgroundColor: "#A72024",
+      marginBottom:10,
   },
   buttonn: {
     backgroundColor: "#A72024",
@@ -76,4 +78,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Location;
+export default AllowNotification;

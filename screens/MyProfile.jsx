@@ -13,24 +13,24 @@ import { theme } from "../assets/theme";
 import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
 import RNTextInput from "../components/RNTextInput";
+import * as ImagePicker from "expo-image-picker";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export default function MyProfile() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [birthday, setBirthday] = useState(new Date());
-
-  const handleDatePick = async () => {
-    const { action, year, month, day } = await DatePickerAndroid.open({
-      date: birthday,
+  const pickImageAsync = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      quality: 1,
     });
 
-    if (action === DatePickerAndroid.dismissedAction) {
-      return;
+    if (!result.canceled) {
+      console.log(result);
+    } else {
+      console.log("You did not select any image.");
     }
-
-    setBirthday(new Date(year, month, day));
   };
 
   return (
@@ -49,9 +49,11 @@ export default function MyProfile() {
             />
           </View>
 
-          <View style={styles.imageContainer}>
-            <Text style={styles.addPhoto}>+</Text>
-          </View>
+          <TouchableOpacity onPress={pickImageAsync}>
+            <View style={styles.imageContainer}>
+              <Text style={styles.addPhoto}>+</Text>
+            </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.inputContainer}>
           <RNTextInput
