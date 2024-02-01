@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import OTPInput from "../components/OTPInput";
 import { theme } from "../assets/theme";
+import { ClearIcon } from "../assets/Icon";
 
 const OTPScreen = () => {
   const [otp, setOtp] = useState(["", "", "", ""]); // State for each digit
@@ -76,7 +77,13 @@ const OTPScreen = () => {
             }
           >
             <Text style={styles.numberButtonText}>
-              {typeof item === "number" ? item : item.key}
+              {typeof item === "number" ? (
+                item
+              ) : item.key === "X" ? (
+                <ClearIcon />
+              ) : (
+                ""
+              )}
             </Text>
           </TouchableOpacity>
         ))}
