@@ -5,8 +5,8 @@ import Home from './pages/Home';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Intro />
-     {/* <Home /> */}
+      {/* <Intro /> */}
+     <Home />
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
